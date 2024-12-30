@@ -1,0 +1,93 @@
+
+/* File: styles.css */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    transition: background 0.5s ease-in-out;
+}
+body:hover {
+    background: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
+}
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+h1 {
+    font-size: 3rem;
+    color: #ff6f61;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+h1:hover {
+    color: #ff4757;
+}
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+.balloons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    background: #ff6f61;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+.balloon:hover {
+    transform: scale(1.2);
+}
+.balloon:nth-child(2) {
+    background: #feca57;
+    animation-delay: 0.5s;
+}
+.balloon:nth-child(3) {
+    background: #1dd1a1;
+    animation-delay: 1s;
+}
+.string {
+    width: 2px;
+    height: 50px;
+    background: #555;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
